@@ -26,7 +26,7 @@ private const X_API_KEY = "";
  *
  * $hashedSecretKey = substr(md5(SECRET_KEY, true), 24);
  * for ($i = 16, $i2 = 0; $i2 < 8; $i2++, $i++)
- *   $hasedSecretKey[$i] = $hashedSecretKey[$i2];
+ *   $hashedSecretKey[$i] = $hashedSecretKey[$i2];
  * $bundledSecretKey = $hashedSecretKey;
  *
  * This key will be used to encrypt the payload.
