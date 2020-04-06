@@ -50,6 +50,8 @@ final class CodePresenter
     /**
      * @param string $nim
      * @param string $code
+     *
+     * Constructor.
      */
     public function __construct(string $nim, string $code)
     {

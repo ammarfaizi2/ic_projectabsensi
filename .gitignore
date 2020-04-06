@@ -5,5 +5,4 @@
 *.log
 *.tmp
 *.lock
-/.phpintel/
 /vendor/
