@@ -15,7 +15,7 @@ final class CodePresenter
     /**
      * API endpoint.
      */
-    private const ENDPOINT_URL = "http://202.91.9.14:6000/api/presensi_mobile/validate_ticket";
+    private const ENDPOINT_URL = "http://202.91.9.14:6000/api/v1.1/presensi_mobile/validate_ticket";
 
     /**
      * Ask for X_API_KEY to IC Departement.
@@ -30,7 +30,7 @@ final class CodePresenter
      *
      * $hashedSecretKey = substr(md5(SECRET_KEY, true), 24);
      * for ($i = 16, $i2 = 0; $i2 < 8; $i2++, $i++)
-     *   $hasedSecretKey[$i] = $hashedSecretKey[$i2];
+     *   $hashedSecretKey[$i] = $hashedSecretKey[$i2];
      * $bundledSecretKey = $hashedSecretKey;
      *
      * This key will be used to encrypt the payload.
@@ -78,8 +78,10 @@ final class CodePresenter
                 CURLOPT_HTTPHEADER => [
                     "X-Api-Key: {$amikomXApiKey}",
                     "Content-Type: application/json",
+                    "Connection" => "Keep-Alive",
+                    "Accept-Encoding" => "gzip"
                 ],
-                CURLOPT_USERAGENT => "okhttp/3.10.0",
+                CURLOPT_USERAGENT => "okhttp/4.2.1",
                 CURLOPT_CONNECTTIMEOUT => 15,
                 CURLOPT_TIMEOUT => 30
             ]
