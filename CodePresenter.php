@@ -76,7 +76,7 @@ final class CodePresenter
                     ["data" => self::encryptPayload($this->nim, $this->code)]
                 ),
                 CURLOPT_HTTPHEADER => [
-                    "X-Api-Key: {$amikomXApiKey}",
+                    "X-Api-Key: ".self::X_API_KEY,
                     "Content-Type: application/json",
                     "Connection" => "Keep-Alive",
                     "Accept-Encoding" => "gzip"
